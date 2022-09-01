@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.top-nav-bar{
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  display: flex;
+  height: auto;
+  
+  
+  background: white;
+  justify-content: left;
+  font-family: 'Brush Script MT', cursive;
+  align-items: center;
+ /* border: 1px solid black;*/
+}
+
+.top-nav-bar span:first-child{
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  
+ 
+}
+
+.top-nav-bar span:nth-child(2){
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.top-nav-bar span:nth-child(3){
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+footer{
+  width: 100%;
+  height: auto;
+  padding: 1.0rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  /*position: absolute;*/
+  /*bottom: 0;*/
+} 
+
+footer .links-container{
+  width: 15%;
+  margin-left: auto;
+  margin-right: 2%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .links-container .links{
+  display: flex;
+  flex-direction: column;
+  /*justify-content: center;*/
+}
+footer .links-container .links a{
+  display: flex;
+  flex-direction: row;
+  place-items: center;
+  gap: 15px;
+}
+
+/*
+
+.nav{
+  width: 99%;
+  padding: 1.0rem;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 1px;
+  margin: auto;
+}*/
+
+@media only screen and (min-width: 768px) {
+  .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+}
+body {
+  padding: 10px;
+}
+
+.brdr {
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+} 
+
+.col-left{
+  overflow: hidden;
+  min-height: 450px;
+  margin: 0px 0px 70px 0px;
+  box-shadow: 0 0 20px #5555fa;
+  border-radius: 20px;
+  /* width: 10rem; */
+}
+
+.footerfirst{
+  background-color: #2f3235; 
+  color:rgb(120, 123, 108);
+}
+
+.marq {
+  border: 1px solid #005C6D;
+  font-weight: bold;
+  color: #005C6D;
+  padding: 2px 5px;
+  margin-top: 5px;
+}
+

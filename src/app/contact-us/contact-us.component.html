@@ -1,0 +1,41 @@
+<body>
+  <br />
+  <h3 style="text-align: center">Contact Form</h3>
+
+  <div class="container">
+    <form action="/action_page.php" >
+      <label for="fname">First Name</label>
+      <input
+        type="text"
+        id="fname"
+        name="firstname"
+        placeholder="Your first name.."
+      />
+
+      <label for="lname">Last Name</label>
+      <input
+        type="text"
+        id="lname"
+        name="lastname"
+        placeholder="Your last name.."
+      />
+
+      <label for="state">Email ID </label>
+      <input type="text" id="state" name="state" placeholder="Your Email..." />
+
+      <label for="subject">Subject</label>
+      <textarea
+        id="subject"
+        name="subject"
+        placeholder="Write something.."
+        style="height: 200px"
+      ></textarea>
+     
+      <div  class="text-center" >
+        <button type="submit" (click)="Alert()" class="form-submit-button text-align: center;  ">&nbsp;&nbsp;Submit&nbsp;&nbsp;</button><br>
+        <br>
+        
+    </div>
+    </form>
+  </div>
+</body>

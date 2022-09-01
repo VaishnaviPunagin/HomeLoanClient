@@ -1,0 +1,22 @@
+<br><h2>All Customers</h2>
+<br>
+<table>
+    <tr>
+        <th>
+            FirstName
+        </th>
+        <th>
+            LastName
+        </th>
+    </tr>
+    
+    <tr *ngFor="let c of customerList">
+        <td>{{c.firstName}}</td>
+        <td>{{c.lastName}}</td>
+        
+        <td><a routerLink="/customerDetails/{{c.customerId}}" class="btn btn-warning">Details</a></td>
+            &nbsp;
+        <td><a routerLink="/edit/{{c.customerId}}" class="btn btn-warning">Edit</a></td>
+    </tr>
+
+</table>

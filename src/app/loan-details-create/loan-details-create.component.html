@@ -1,0 +1,52 @@
+<h2 class="text-center">Enter Loan Details</h2> <br> <br>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <label for="loanAmount">Loan Amount</label><br>
+    <input #loanAmt="ngModel" required minlength="1" maxlength="20" type="number" name="loanAmount" ngModel placeholder="Enter Loan Amount" class=form-control> <br>
+    <div *ngIf="loanAmt.touched && loanAmt.invalid" class="alert alert-danger">
+        <p *ngIf="loanAmt.hasError('required')">Give name pa</p>
+        <p *ngIf="loanAmt.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="tenure">Tenure</label>&nbsp;Please note, Tenure is to be entered in number of months.<br>
+    <input #time="ngModel" required minlength="1" maxlength="20" type="number" name="tenure" ngModel placeholder="Enter Tenure you'd pay the loan back over" class=form-control> <br>
+    <div *ngIf="time.touched && time.invalid" class="alert alert-danger">
+        <p *ngIf="time.hasError('required')">Give name pa</p>
+        <p *ngIf="time.hasError('minlength')">More letters pa</p>
+    </div>
+
+    
+    <label for="bankName">Bank Name</label><br>
+    <input #bank="ngModel" required minlength="5" maxlength="25" type="text" name="bankName" ngModel placeholder="Enter Bank Name" class=form-control> <br>
+    <div *ngIf="bank.touched && bank.invalid" class="alert alert-danger">
+        <p *ngIf="bank.hasError('required')">Give name pa</p>
+        <p *ngIf="bank.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="ifscCode">IFSC Code</label><br>
+    <input #ifsc="ngModel" required minlength="1" maxlength="11" type="text" name="ifscCode" ngModel placeholder="Enter IFSC Code" class=form-control> <br>
+    <div *ngIf="ifsc.touched && ifsc.invalid" class="alert alert-danger">
+        <p *ngIf="ifsc.hasError('required')">Give name pa</p>
+        <p *ngIf="ifsc.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="cifNumber">CIF Number</label><br>
+    <input #cif="ngModel" required minlength="5" maxlength="" type="text" name="cifNumber" ngModel placeholder="Enter CIF Number" class=form-control> <br>
+    <div *ngIf="cif.touched && cif.invalid" class="alert alert-danger">
+        <p *ngIf="cif.hasError('required')">Give name pa</p>
+        <p *ngIf="cif.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="accountNumber">Bank Name</label><br>
+    <input #acc="ngModel" required minlength="5" maxlength="" type="text" name="accountNumber" ngModel placeholder="Enter Bank Name" class=form-control> <br>
+    <div *ngIf="acc.touched && acc.invalid" class="alert alert-danger">
+        <p *ngIf="acc.hasError('required')">Give name pa</p>
+        <p *ngIf="acc.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <br>
+    <div class="text-center">
+        <button type="submit" class="form-submit-button2">Submit</button>
+    </div>
+    
+</form>
