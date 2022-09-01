@@ -1,0 +1,31 @@
+
+<div class="canister">
+    <div class="form-box">
+
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col col-md-8 col-lg-6">
+        <h2 class="text-center">EMI Calculator</h2>
+
+        <label for="loan1">Enter Loan</label><br>
+        <input type="text" #Loan class="form-control"/><br>
+
+
+        <label for="Tenure">Tenure (in years)</label><br>
+        <input type="text" #Tenure class="form-control"/><br>
+
+        <label for="ROI">Rate of Interest (FIXED) </label><br>
+        <input type="text"   placeholder="8.5" [disabled]="true" readonly class="form-control"><br>
+
+        <h4>EMI:&nbsp;<strong>{{result|currency:'&#8377;'}}</strong></h4><br><br>
+        
+        <div  class="text-center" >
+            <button (click)="CalculateEmi(Loan.value,Tenure.value)" class="form-submit-button text-align: center;  ">&nbsp;&nbsp;CALCULATE&nbsp;&nbsp;</button><br>
+            <br>
+            
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+</div>

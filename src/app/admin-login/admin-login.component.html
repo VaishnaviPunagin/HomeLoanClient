@@ -1,0 +1,33 @@
+<br>
+<div class="canister">
+    <div class="form-box">
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col col-md-8 col-lg-6">
+        <br> <br>
+        <h1 class="text-center">Admins Only</h1>
+    <form #form="ngForm" (ngSubmit)="loginSubmit(form)" >
+        <br> <br>
+        
+        <label for="adminId">Enter Admin Id:</label><br>
+        <input type="text" name="adminId" ngModel placeholder="Enter Admin Id" class=form-control> <br>
+    
+        <label for="password">Enter Password:</label><br>
+        <input type="password" name="password" ngModel placeholder=" * * * * * * *" class=form-control> <br>
+        <span style="margin-left: 0;margin-right: auto;">
+            <input id="remember" type="checkbox" class="check-box">
+            <label for="remember">Remember Password</label>
+          <br></span>
+          <br>
+        <div  class="text-center" >
+            <button type="submit" class="form-submit-button text-align: center;  ">&nbsp;&nbsp;Login&nbsp;&nbsp;</button><br>
+            <br>
+            
+        </div>
+        <div *ngIf="formSubmitted" class="submitted">Login Successful</div>
+        
+    </form>
+    </div>
+    </div>
+    </div>
+</div></div>

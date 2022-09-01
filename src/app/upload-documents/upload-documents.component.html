@@ -1,0 +1,73 @@
+<h2 class="text-center">Upload Your Documents</h2> <br><br>
+
+<div class=row>
+
+<div class="col-md-4">
+    <label for="panCard">Pan Card</label><br>
+    <input class="form-control" type="file" (change)="onChange($event)">
+    <div class="text-center"><br><button (click)="onUploadPan()" class="form-submit-button2">Upload</button></div>
+</div>
+
+<div class="col-md-4">
+    <label for="aadharCard">Pan Card</label><br>
+    <input class="form-control" type="file" (change)="onChange($event)">
+    <div class="text-center"><br>
+        <button (click)="onUploadAadhar()" class="form-submit-button2">Upload</button></div>
+    
+</div>
+
+<div class="col-md-4">
+    <label for="salarySlip">Salary Slip</label><br>
+    <input class="form-control" type="file" (change)="onChange($event)">
+    <div class="text-center">
+        <br>
+        <button (click)="onUploadSalarySlip()" class="form-submit-button2 test-center">Upload</button>
+    </div>
+    
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-4">
+    <label for="nocFromBuilder">NOC From Builder</label><br>
+    <input class="form-control" type="file" (change)="onChange($event)">
+    <div class="text-center"><br><button (click)="onUploadNOC()" class="form-submit-button2">Upload</button></div>
+</div>
+
+<div class="col-md-4">
+    <label for="agreementToSale">Sales Agreement</label><br>
+    <input class="form-control" type="file" (change)="onChange($event)">
+    <div class="text-center"><br><button (click)="onUploadSale()" class="form-submit-button2">Upload</button></div>
+</div>
+
+<div class="col-md-4 container" style="padding-top:25px;" *ngIf="loading"><h3>Loading ...</h3></div>
+
+</div>
+
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+<br> <br>
+<label for="panCard">Pan Card</label><br>
+<input #panCard="ngModel" required type="text" name="panCard" ngModel placeholder="{{pan}}" class=form-control> <br>
+    
+<label for="aadharCard">Aadhar Card</label><br>
+<input #aadharCard="ngModel" required type="text" name="aadharCard" ngModel placeholder="{{aadhar}}" class=form-control> <br>
+  
+<label for="salarySlip">Salary Slip</label><br>
+<input #salarySlip="ngModel" required type="text" name="salarySlip" ngModel placeholder="{{salaryS}}" class=form-control> <br>
+    
+<label for="nocFromBuilder">NOC From Builder</label><br>
+<input #nocFromBuilder="ngModel" required type="text" name="nocFromBuilder" ngModel placeholder="{{noc}}" class=form-control> <br>
+    
+<label for="agreementToSale">Agreement To Sale</label><br>
+<input #agreementToSale="ngModel" required type="text" name="agreementToSale" ngModel placeholder="{{sale}}" class=form-control> <br>
+   
+<br>
+<div class="text-center">
+    <br>
+    <button type="submit" class="form-submit-button2">Submit</button>
+</div>
+
+
+</form>

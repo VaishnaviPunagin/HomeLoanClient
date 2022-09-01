@@ -1,0 +1,69 @@
+
+<h2 class="text-center">Enter Income Details</h2> <br>
+<form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    
+    <label for="propertyName">Property Name</label><br>
+    <input #propName="ngModel" required minlength="1" maxlength="20" type="text" name="propertyName" ngModel placeholder="Enter Property Name" class=form-control> <br>
+    <div *ngIf="propName.touched && propName.invalid" class="alert alert-danger">
+        <p *ngIf="propName.hasError('required')">Give name pa</p>
+        <p *ngIf="propName.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="propertyLocation">Property Location</label><br>
+    <input #propLoc="ngModel" required minlength="1" maxlength="20" type="text" name="propertyLocation" ngModel placeholder="Enter Property Location" class=form-control> <br>
+    <div *ngIf="propLoc.touched && propLoc.invalid" class="alert alert-danger">
+        <p *ngIf="propLoc.hasError('required')">Give name pa</p>
+        <p *ngIf="propLoc.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="pinCode">Pin Code</label><br>
+    <input #pin="ngModel" required minlength="1" maxlength="6" type="text" name="pinCode" ngModel placeholder="Enter Pin Code" class=form-control> <br>
+    <div *ngIf="pin.touched && pin.invalid" class="alert alert-danger">
+        <p *ngIf="pin.hasError('required')">Give name pa</p>
+        <p *ngIf="pin.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="estimatedAmount">Estimated Amount</label><br>
+    <input #amt="ngModel" required minlength="1" maxlength="20" type="number" step=0.2 name="estimatedAmount" ngModel placeholder="Enter Estimated Amount" class=form-control> <br>
+    <div *ngIf="amt.touched && amt.invalid" class="alert alert-danger">
+        <p *ngIf="amt.hasError('required')">Give name pa</p>
+        <p *ngIf="amt.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="typeOfEmployment">Property Name</label><br>
+    <input #employment="ngModel" required minlength="1" maxlength="20" type="text" name="typeOfEmployment" ngModel placeholder="Enter type of employment" class=form-control> <br>
+    <div *ngIf="employment.touched && employment.invalid" class="alert alert-danger">
+        <p *ngIf="employment.hasError('required')">Give name pa</p>
+        <p *ngIf="employment.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="retirementAge">Retirement Age</label><br>
+    <input #age="ngModel" required minlength="1" maxlength="2" type="number" name="retirementAge" ngModel placeholder="Enter Retirement Age" class=form-control> <br>
+    <div *ngIf="age.touched && age.invalid" class="alert alert-danger">
+        <p *ngIf="age.hasError('required')">Give name pa</p>
+        <p *ngIf="age.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="organizationName">Organization Name</label><br>
+    <input #orgName="ngModel" required minlength="1" maxlength="20" type="text" name="organizationName" ngModel placeholder="Enter Organization Name" class=form-control> <br>
+    <div *ngIf="orgName.touched && orgName.invalid" class="alert alert-danger">
+        <p *ngIf="orgName.hasError('required')">Give name pa</p>
+        <p *ngIf="orgName.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <label for="employerName">Employer Name</label><br>
+    <input #empName="ngModel" required minlength="1" maxlength="20" type="text" name="employerName" ngModel placeholder="Enter Employer Name" class=form-control> <br>
+    <div *ngIf="empName.touched && empName.invalid" class="alert alert-danger">
+        <p *ngIf="empName.hasError('required')">Give name pa</p>
+        <p *ngIf="empName.hasError('minlength')">More letters pa</p>
+    </div>
+
+    <br>
+    <div class="text-center">
+       
+        <button type="submit" class="form-submit-button2">Submit</button>
+    </div>
+
+
+</form>

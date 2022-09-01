@@ -1,0 +1,66 @@
+<div class="row">
+    <div class=col-md-8 ><h2>Your Profile</h2></div>
+    <!--<div class="col-md-4 text-center">
+        <h2>Edit Details <a routerLink="/customerDetails/{{thisCustomer.customerId}}/editProfile/{{thisCustomer.customerId}}"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMTMTpR5pZvxbjJniLgQWGvpZoSiVjPWAlcg&usqp=CAU" height=25 width="25"></a></h2>
+        
+    </div>-->
+</div>
+<hr>
+<form>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" placeholder="{{thisCustomer.firstName}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="middleName">Middle Name</label><br>
+            <input name="middleName" placeholder="{{thisCustomer.middleName}}" disabled class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="lastName">Last Name</label><br>
+            <input name="lastName" placeholder="{{thisCustomer.lastName}}" class=form-control disabled> <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="emailId">Email Id</label><br>
+            <input disabled type="text" name="emailId" placeholder="{{thisCustomer.emailId}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="phoneNumber">Phone Number</label><br>
+            <input  name="phoneNumber" disabled placeholder="{{thisCustomer.phoneNumber}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="dateOfBirth">Date of Birth</label><br>
+            <input type="text" disabled name="dateOfBirth" placeholder="{{thisCustomer.dateOfBirth | date:'shortDate'}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="age">Age</label><br>
+            <input type="number" disabled name="age" ngModel placeholder="{{thisCustomer.age}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="gender">Gender</label><br>
+            <input type="text" disabled name="gender" placeholder="{{thisCustomer.gender}}r" class=form-control> <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="nationality">Nationality</label><br>
+            <input type="text" disabled name="nationality" placeholder="{{thisCustomer.nationality}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="aadharNumber">Aadhar Number</label>
+            <input disabled type="text" name="aadharNumber" placeholder="{{thisCustomer.aadharNumber}}" class=form-control><br>
+        </div>
+        <div class="col-md-4">
+            <label for="panNumber">PAN Number</label>
+            <input disabled type="text" name="panNumber" placeholder="{{thisCustomer.panNumber}}" class=form-control><br>
+        </div>
+    </div>
+</form>

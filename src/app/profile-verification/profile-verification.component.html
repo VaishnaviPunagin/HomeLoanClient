@@ -1,0 +1,201 @@
+<h2>User Profile</h2>
+<hr>
+<form>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="firstName">First Name</label>
+            <input type="text" name="firstName" placeholder="{{thisCustomer.firstName}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="middleName">Middle Name</label><br>
+            <input name="middleName" placeholder="{{thisCustomer.middleName}}" disabled class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="lastName">Last Name</label><br>
+            <input name="lastName" placeholder="{{thisCustomer.lastName}}" class=form-control disabled> <br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="emailId">Email Id</label><br>
+            <input disabled type="text" name="emailId" placeholder="{{thisCustomer.emailId}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="phoneNumber">Phone Number</label><br>
+            <input  name="phoneNumber" disabled placeholder="{{thisCustomer.phoneNumber}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            DROPDOWN FOR APPLICATION STATUS
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="dateOfBirth">Date of Birth</label><br>
+            <input type="text" disabled name="dateOfBirth" placeholder="{{thisCustomer.dateOfBirth | date:'shortDate'}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="age">Age</label><br>
+            <input type="number" disabled name="age" ngModel placeholder="{{thisCustomer.age}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="gender">Gender</label><br>
+            <input type="text" disabled name="gender" placeholder="{{thisCustomer.gender}}r" class=form-control> <br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <label for="nationality">Nationality</label><br>
+            <input type="text" disabled name="nationality" placeholder="{{thisCustomer.nationality}}" class=form-control> <br>
+        </div>
+        <div class="col-md-4">
+            <label for="aadharNumber">Aadhar Number</label>
+            <input disabled type="text" name="aadharNumber" placeholder="{{thisCustomer.aadharNumber}}" class=form-control><br>
+        </div>
+        <div class="col-md-4">
+            <label for="panNumber">PAN Number</label>
+            <input disabled type="text" name="panNumber" placeholder="{{thisCustomer.panNumber}}" class=form-control><br>
+        </div>
+    </div>
+</form>
+<br>
+<hr>
+
+
+<p>Income Details</p>
+<hr>
+<form>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="propertyName">Property Name</label>
+            <input type="text" name="propertyName" placeholder="{{currentIncome.propertyName}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="propertyLocation">Property Location</label>
+            <input type="text" name="propertyLocation" placeholder="{{currentIncome.propertyLocation}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="pinCode">Pin Code</label>
+            <input type="text" name="pinCode" placeholder="{{currentIncome.pinCode}}" disabled class=form-control ><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="estimatedAmount">Estimated Amount</label>
+            <input type="text" name="estimatedAmount" placeholder="{{currentIncome.estimatedAmount}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="typeOfEmployment">Type Of Employment</label>
+            <input type="text" name="typeOfEmployment" placeholder="{{currentIncome.typeOfEmployment}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="retirementAge">RetirementAge</label>
+            <input type="text" name="retirementAge" placeholder="{{currentIncome.retirementAge}}" disabled class=form-control ><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="organization Name">Organization Name</label>
+            <input type="text" name="organizationName" placeholder="{{currentIncome.organizationName}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="employerName">Employer Name</label>
+            <input type="text" name="employerName" placeholder="{{currentIncome.employerName}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            
+        </div>
+    </div>
+</form>
+<br>
+<hr>
+
+
+
+Documents Uploaded
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <a href="{{userDocs.panCard}}"> 
+        <img src="https://www.iconpacks.net/icons/2/free-file-icon-1453-thumb.png" height=50 width=50><br>
+        Pan Card
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{userDocs.aadharCard}}"> 
+        <img src="https://www.iconpacks.net/icons/2/free-file-icon-1453-thumb.png" height=50 width=50><br>
+        Aadhar Card
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{userDocs.salarySlip}}"> 
+        <img src="https://www.iconpacks.net/icons/2/free-file-icon-1453-thumb.png" height=50 width=50><br>
+        Salary Slip
+        </a>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-4">
+        <a href="{{userDocs.nocFromBuilder}}"> 
+        <img src="https://www.iconpacks.net/icons/2/free-file-icon-1453-thumb.png" height=50 width=50><br>
+        NOC from Builder
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a href="{{userDocs.agreementToSale}}"> 
+        <img src="https://www.iconpacks.net/icons/2/free-file-icon-1453-thumb.png" height=50 width=50><br>
+        Sale Agreement
+        </a>
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+</div>
+
+<hr>
+
+
+
+<p>Loan Details</p>
+<hr>
+<form>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="loanAmount">Loan Amount</label>
+            <input type="text" name="loanAmount" placeholder="{{currentLoan.loanAmount}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="tenure">Tenure, in months</label>
+            <input type="text" name="tenure" placeholder="{{currentLoan.tenure}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="bankName">Bank Name</label>
+            <input type="text" name="bankName" placeholder="{{currentLoan.bankName}}" disabled class=form-control ><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="ifscCode">IFSC Code</label>
+            <input type="text" name="ifscCode" placeholder="{{currentLoan.ifscCode}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="cifNumber">CIF Number</label>
+            <input type="text" name="cifNumber" placeholder="{{currentLoan.cifNumber}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="accountNumber">Account Number</label>
+            <input type="text" name="accountNumber" placeholder="{{currentLoan.accountNumber}}" disabled class=form-control ><br>
+        </div>
+    </div>
+
+</form>
+
+
+

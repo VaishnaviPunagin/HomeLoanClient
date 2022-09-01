@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-md-6">
+        <h3>Welcome {{thisCustomer.firstName}}!</h3>
+        Please fill Income Details > Upload required Documents > Loan Details to submit the application for Approval.
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        Application Number: {{thisCustomer.customerId}}<br>
+        Application Status: {{thisCustomer.applicationStatus}}
+    </div>
+</div>
+
+<hr>
+<div class="row">
+    <div class="col-md-10">
+        <router-outlet></router-outlet>
+    </div>
+    
+    <div class="col-md-2 ">
+        <br><br>
+        <div class="btn-group-vertical">
+            <button value="Profile" (click)="onProfileButton()" class="form-submit-button">Your Profile</button>
+            <button class="form-submit-button" routerLink="/customerDetails/{{thisCustomer.customerId}}/editProfile/{{thisCustomer.customerId}}">Edit Profile </button>
+            <button value="Income" (click)="onIncomeButton()" class="form-submit-button">Income Details</button>
+            <button value="Documents" (click)="onDocumentsButton()" class="form-submit-button">Documents Upload</button>
+            <button value="LoanDetails" (click)="onLoanButton()" class="form-submit-button">Loan Details</button>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-4">
+        
+    </div>
+    <div class="col-md-4">
+       
+    </div>
+</div>
+
+<br><br>
+
+<hr><br>
+
+
+<script>
+    
+</script>

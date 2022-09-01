@@ -1,0 +1,9 @@
+.canister{
+   width:100%;
+   display: flex;
+   justify-content: center;
+   place-items: center;
+   min-height: 80vh;
+   /*height: 100vh;*/
+   background-color:white;
+ }

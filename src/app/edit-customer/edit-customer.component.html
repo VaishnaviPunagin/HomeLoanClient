@@ -1,0 +1,45 @@
+<h2>Edit User Profile</h2> <br>
+<form #myform="ngForm" (ngSubmit)="onEditSubmit(thisCustomer)">
+    
+   <div class="row">
+    <div class="col-md-4">
+    <label for="firstName">First Name</label><br>
+    <input #catName="ngModel" required minlength="1" maxlength="20" type="text" name="firstName" placeholder="Edit firstName" class=form-control [(ngModel)]="thisCustomer.firstName"> <br>
+    <div *ngIf="catName.touched && catName.invalid" class="alert alert-danger">
+        <p *ngIf="catName.hasError('required')">Give name pa</p>
+        <p *ngIf="catName.hasError('minlength')">More letters pa</p>
+    </div></div>
+    <div class="col-md-4">
+    <label for="middleName">Middle Name</label><br>
+    <input #catName="ngModel" required minlength="1" maxlength="20" type="text" name="middleName" placeholder="Edit Middle Name" class=form-control [(ngModel)]="thisCustomer.middleName"> <br>
+    <div *ngIf="catName.touched && catName.invalid" class="alert alert-danger">
+        <p *ngIf="catName.hasError('required')">Give name pa</p>
+        <p *ngIf="catName.hasError('minlength')">More letters pa</p>
+    </div></div>
+    <div class="col-md-4">
+    <label for="lastName">Last Name</label><br>
+    <input #catName="ngModel" required minlength="1" maxlength="20" type="text" name="lastName" placeholder="Edir Middle Name" class=form-control [(ngModel)]="thisCustomer.lastName"> <br>
+    <div *ngIf="catName.touched && catName.invalid" class="alert alert-danger">
+        <p *ngIf="catName.hasError('required')">Give name pa</p>
+        <p *ngIf="catName.hasError('minlength')">More letters pa</p>
+    </div></div>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+    <label for="phoneNumber">Phone</label><br>
+    <input #catName="ngModel" required minlength="10" maxlength="20" type="text" name="phoneNumber" placeholder="Edit Phone Number" class=form-control [(ngModel)]="thisCustomer.phoneNumber"> <br>
+    <div *ngIf="catName.touched && catName.invalid" class="alert alert-danger">
+        <p *ngIf="catName.hasError('required')">Give name pa</p>
+        <p *ngIf="catName.hasError('minlength')">More letters pa</p>
+    </div></div>
+    </div>
+
+    <div class="text-center">
+        <button type="submit " class="form-submit-button2">Submit</button>
+    </div>
+   
+</form>
+<br><br>
+<!--[disabled]="!myform.valid" Or do this with submit button for invalid cases!
+
+-->

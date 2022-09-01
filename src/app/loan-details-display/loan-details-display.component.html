@@ -1,0 +1,35 @@
+<h2 class="text-center">Loan Details</h2>
+<hr>
+<form>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="loanAmount">Loan Amount</label>
+            <input type="text" name="loanAmount" placeholder="{{currentLoan.loanAmount}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="tenure">Tenure, in months</label>
+            <input type="text" name="tenure" placeholder="{{currentLoan.tenure}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="bankName">Bank Name</label>
+            <input type="text" name="bankName" placeholder="{{currentLoan.bankName}}" disabled class=form-control ><br>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <label for="ifscCode">IFSC Code</label>
+            <input type="text" name="ifscCode" placeholder="{{currentLoan.ifscCode}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="cifNumber">CIF Number</label>
+            <input type="text" name="cifNumber" placeholder="{{currentLoan.cifNumber}}" disabled class=form-control ><br>
+        </div>
+        <div class="col-md-4">
+            <label for="accountNumber">Account Number</label>
+            <input type="text" name="accountNumber" placeholder="{{currentLoan.accountNumber}}" disabled class=form-control ><br>
+        </div>
+    </div>
+
+</form>

@@ -1,0 +1,27 @@
+.form-submit-button {
+    background: #018cf7;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    size: 200px;
+    padding: 10px 40px;
+    text-align: center; 
+    width: 100%; 
+    }
+    .form-submit-button:hover {
+    background:#005C6D;
+    color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #eee;
+    text-shadow: none;
+    padding: 10px 40px;
+    text-align: center;
+    width: 100%;   
+    }
+    .col-md-2{
+        background-color: #fff;
+    }
+  

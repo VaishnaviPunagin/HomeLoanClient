@@ -1,0 +1,23 @@
+
+<div class="canister">
+    <div class="form-box">
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col col-md-8 col-lg-6">
+        <h2 class="text-center">Eligibility Calculator</h2>
+        <br> <br><label for="income">Your Monthly Income </label><br>
+        <input type="text" #income class="form-control"/><br>
+        <label for="ROI">Rate Of Interest (FIXED) </label><br>
+        <input type="text"   placeholder="0.6" [disabled]="true" class="form-control"><br>
+       <h4>Eligibility Amount:&nbsp;<strong>{{result|currency:'&#8377;'}} </strong> </h4><br><br>
+       <!--<button (click)="Calculate(income.value)" class="btn btn-success">Calculate</button>  -->
+        <div  class="text-center" >
+            <button (click)="Calculate(income.value)" class="form-submit-button text-align: center;  ">&nbsp;&nbsp;CALCULATE&nbsp;&nbsp;</button><br>
+            <br>
+            
+        </div>
+    </div>
+        </div>
+    </div></div>
+</div>
+    
