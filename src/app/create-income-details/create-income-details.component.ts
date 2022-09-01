@@ -55,7 +55,9 @@ export class CreateIncomeDetailsComponent implements OnInit {
       });
       
 
-    this.router.navigateByUrl("/customerDetails/"+this.who+"/incomeDisplay");
+    this.router.navigateByUrl("/customerDetails/"+this.who+"/incomeDisplay").then(() => {
+      window.location.reload();
+    });
     
   }
 

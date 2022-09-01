@@ -27,6 +27,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfileVerificationComponent } from './profile-verification/profile-verification.component';
 import { ListVerificationRequiredComponent } from './list-verification-required/list-verification-required.component';
+import { ListApprovedLoansComponent } from './list-approved-loans/list-approved-loans.component';
+import { ListRejectedLoansComponent } from './list-rejected-loans/list-rejected-loans.component';
 //import { ContacUsComponent } from './contac-us/contac-us.component';
 //import { ListCustomersComponent } from './list-customers/list-customers.component';
 
@@ -54,6 +56,8 @@ import { ListVerificationRequiredComponent } from './list-verification-required/
     ProfileComponent,
     ProfileVerificationComponent,
     ListVerificationRequiredComponent,
+    ListApprovedLoansComponent,
+    ListRejectedLoansComponent,
  //   ListCustomersComponent
   ],
   imports: [

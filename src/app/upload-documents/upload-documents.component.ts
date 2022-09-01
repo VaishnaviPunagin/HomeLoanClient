@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { CustomerService } from '../customer.service';
 import { DocumentsServiceService } from '../documents-service.service';
 import { FileUploadService } from '../file-upload.service';
@@ -26,7 +27,7 @@ export class UploadDocumentsComponent implements OnInit {
   userDocs:DocumentsUpload;
   currentCustomer:Customer;
 
-  constructor(private fileUploadService: FileUploadService, private docsService:DocumentsServiceService, private customerService:CustomerService) { }
+  constructor(private fileUploadService: FileUploadService, private docsService:DocumentsServiceService, private customerService:CustomerService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -150,6 +151,10 @@ export class UploadDocumentsComponent implements OnInit {
         console.log(form);
         console.log(this.userDocs);
       });
+
+    this.router.navigateByUrl("/customerDetails/"+this.who+"/documentsDisplay").then(() => {
+      window.location.reload();
+    });
   }
 
 }

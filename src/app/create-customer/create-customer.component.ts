@@ -23,16 +23,14 @@ export class CreateCustomerComponent implements OnInit {
   onSubmit(body:any)
   {
     try{this.newCustomer=body.value;
-    this._service.createCustomer(this.newCustomer).subscribe(data=>
-        {
-          console.log(body);
-          console.log(this.newCustomer);
-        });
-    this.router.navigateByUrl('/customerLogin');}
-    catch{
-      alert("Account could not be created, try again.")
-    }
-
+      this._service.createCustomer(this.newCustomer).subscribe(data=>
+          {
+            console.log(body);
+            console.log(this.newCustomer);
+          });
+      this.router.navigateByUrl('/customerLogin');}
+      catch{
+        alert("Account could not be created, try again.")
+      }
   }
-
 }

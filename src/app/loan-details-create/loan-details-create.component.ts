@@ -39,6 +39,10 @@ export class LoanDetailsCreateComponent implements OnInit {
       console.log(this.current);
     });
 
+    this.router.navigateByUrl("/customerDetails/"+this.who+"/loanDetailsDisplay").then(() => {
+      window.location.reload();
+    });
+
   }
 
 }

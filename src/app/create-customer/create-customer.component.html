@@ -11,8 +11,8 @@
         <label for="firstName">First Name</label>
         <input #catName="ngModel" required minlength="1" maxlength="20" type="text" name="firstName" ngModel placeholder="Enter First Name" class=form-control><br>
         <div *ngIf="catName.touched && catName.invalid" class="alert alert-danger">
-            <p *ngIf="catName.hasError('required')">Give name pa</p>
-            <p *ngIf="catName.hasError('minlength')">More letters pa</p>
+            <p *ngIf="catName.hasError('required')">First Name is required</p>
+            <p *ngIf="catName.hasError('minlength')">Minimum length is to be more than 1</p>
         </div>
     
         <label for="middleName">Middle Name</label><br>
@@ -28,38 +28,34 @@
         <label for="emailId">Email Id</label><br>
         <input #email="ngModel" required minlength="1" maxlength="50" type="text" name="emailId" ngModel placeholder="Enter Email Id" class=form-control> <br>
         <div *ngIf="email.touched && email.invalid" class="alert alert-danger">
-            <p *ngIf="email.hasError('required')">Give name pa</p>
-            <p *ngIf="email.hasError('minlength')">More letters pa</p>
+            <p *ngIf="email.hasError('required')">Email ID is required</p>
+            <p *ngIf="email.hasError('minlength')">Minimum length is to be more than 1</p>
         </div>
     
         <label for="password">Password</label><br>
-        <input type="text" name="password" ngModel placeholder="Enter First Name" class=form-control> <br>
+        <input type="password" name="password" ngModel placeholder="********" class=form-control> <br>
+
 <!--
         <label for="confirmPassword">Confirm Password</label><br>
         <input type="text" name="password" ngModel placeholder="Enter First Name" class=form-control>
         <small class="error" *ngIf="isValid('confirmPassword')">Field is invalid</small>
         <small class="error" *ngIf="formSubmitted && details.get('confirmPassword')!.value!=details.get('password')!.value">Password Do Not Match</small>
-<br>
--->
+<br>-->
+
 
     
         <label for="phoneNumber">Phone Number</label><br>
-        <input #phone="ngModel" required length="12" type="text" name="phoneNumber" ngModel placeholder="Enter Phone Number" class=form-control> <br>
+        <input #phone="ngModel" required length="10" type="text" name="phoneNumber" ngModel placeholder="Enter Phone Number" class=form-control> <br>
         <div *ngIf="phone.touched && phone.invalid" class="alert alert-danger">
-            <p *ngIf="phone.hasError('required')">Give name pa</p>
-            <p *ngIf="phone.hasError('length')">More letters pa</p>
+            <p *ngIf="phone.hasError('required')">Phone number is required</p>
+            <p *ngIf="phone.hasError('length')">Number of digits is not 10</p>
         </div>
     
         <label for="dateOfBirth">Date of Birth</label><br>
         <input #dob="ngModel" type="date" name="dateOfBirth" ngModel placeholder="Enter Date of Birth" class=form-control> <br>
-        <!--<div *ngIf="dob.touched && dob.invalid" class="alert alert-danger">
-            <p *ngIf="dob.hasError('required')">Give name pa</p>
-            <p *ngIf="dob.hasError('length')">More letters pa</p>
-        </div>
-        FIGURE OUT HOW TO DO VALIDATION FOR DATE-->
     
         <label for="age">Age</label><br>
-        <input #a="ngModel" type="number" name="age" ngModel placeholder="EnterPhoneNumber" class=form-control> <br>
+        <input #a="ngModel" type="number" name="age" ngModel placeholder="Enter Age" class=form-control> <br>
     
     
         <label for="gender">Gender</label><br>
@@ -71,29 +67,29 @@
         <label for="nationality">Nationality</label><br>
         <input #nationality="ngModel" required minlength="1" maxlength="20" type="text" name="nationality" ngModel placeholder="Enter Nationality" class=form-control> <br>
         <div *ngIf="nationality.touched && nationality.invalid" class="alert alert-danger">
-            <p *ngIf="nationality.hasError('required')">Give name pa</p>
-            <p *ngIf="nationality.hasError('minlength')">More letters pa</p>
+            <p *ngIf="nationality.hasError('required')">Nationality is required</p>
+            <p *ngIf="nationality.hasError('minlength')">Minimum length is to be more than 1</p>
         </div>
 
         <label for="aadharNumber">Aadhar Number</label>
         <input #aadhar="ngModel" required minlength="1" maxlength="12" type="text" name="aadharNumber" ngModel placeholder="Enter Aadhar Number" class=form-control><br>
         <div *ngIf="aadhar.touched && aadhar.invalid" class="alert alert-danger">
-            <p *ngIf="aadhar.hasError('required')">Give name pa</p>
-            <p *ngIf="aadhar.hasError('minlength')">More letters pa</p>
+            <p *ngIf="aadhar.hasError('required')">Aadhar Number is required</p>
+            <p *ngIf="aadhar.hasError('minlength')">Length is to be 12</p>
         </div>
     
         <label for="panNumber">PAN Number</label>
         <input #pan="ngModel" required minlength="1" maxlength="10" type="text" name="panNumber" ngModel placeholder="Enter Pan Number" class=form-control><br>
         <div *ngIf="pan.touched && pan.invalid" class="alert alert-danger">
-            <p *ngIf="pan.hasError('required')">Give name pa</p>
-            <p *ngIf="pan.hasError('minlength')">More letters pa</p>
+            <p *ngIf="pan.hasError('required')">PAN Number is required</p>
+            <p *ngIf="pan.hasError('minlength')">Length is to be 10</p>
         </div>
         <span style="margin-left: 0;margin-right: auto;">
             <input id="remember" type="checkbox" class="check-box">
             <label for="remember" style="color: slategray"><small> I agree to the terms and conditions And the details provided are Correct</small></label>
          </span>
           
-       <!-- <button type="submit" class="btn btn-success">Submit</button>-->
+       <!--<button type="submit" class="btn btn-success">Submit</button>-->
         <div  class="text-center" >
             <br> <button type="submit" class="form-submit-button text-align: center;  ">&nbsp;&nbsp;Register&nbsp;&nbsp;</button><br>
             <br>
@@ -104,4 +100,4 @@
     </div>
     </div>
     </div>
-</div>
+</div> 

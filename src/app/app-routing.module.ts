@@ -14,7 +14,9 @@ import { EmiCalculatorComponent } from './emi-calculator/emi-calculator.componen
 
 import { HomeComponent } from './home/home.component';
 import { IncomeDetailsDisplayComponent } from './income-details-display/income-details-display.component';
+import { ListApprovedLoansComponent } from './list-approved-loans/list-approved-loans.component';
 import { ListCustomersComponent } from './list-customers/list-customers.component';
+import { ListRejectedLoansComponent } from './list-rejected-loans/list-rejected-loans.component';
 import { ListVerificationRequiredComponent } from './list-verification-required/list-verification-required.component';
 import { LoanDetailsCreateComponent } from './loan-details-create/loan-details-create.component';
 import { LoanDetailsDisplayComponent } from './loan-details-display/loan-details-display.component';
@@ -34,6 +36,12 @@ const routes: Routes = [
       {path:"profile/:id", component: ProfileVerificationComponent}
     ]},
     {path:"submittedForVerification", component: ListVerificationRequiredComponent, children:[
+      {path:"profile/:id", component: ProfileVerificationComponent}
+    ]},
+    {path:"approvedLoans", component:ListApprovedLoansComponent,children:[
+      {path:"profile/:id", component: ProfileVerificationComponent}
+    ]},
+    {path:"rejectedLoans", component:ListRejectedLoansComponent, children:[
       {path:"profile/:id", component: ProfileVerificationComponent}
     ]}
   ]},

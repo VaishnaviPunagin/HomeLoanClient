@@ -1,6 +1,6 @@
 <h2>User Profile</h2>
 <hr>
-<form>
+<form #thisForm="ngForm" (ngSubmit)="OnSubmit(thisForm)" >
     <div class="row">
         <div class="col-md-4">
             <label for="firstName">First Name</label>
@@ -26,7 +26,12 @@
             <input  name="phoneNumber" disabled placeholder="{{thisCustomer.phoneNumber}}" class=form-control> <br>
         </div>
         <div class="col-md-4">
-            DROPDOWN FOR APPLICATION STATUS
+            <label for="application Status">Application Status</label><br>
+            <select name="applicationStatus" class="form-control">
+                <option value="Submitted for Approval">Submitted For Approval</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+            </select>
         </div>
     </div>
 
@@ -63,7 +68,7 @@
 <hr>
 
 
-<p>Income Details</p>
+<h2>Income Details</h2>
 <hr>
 <form>
 
@@ -116,7 +121,7 @@
 
 
 
-Documents Uploaded
+<h2>Documents Uploaded</h2>
 <hr>
 <div class="row">
     <div class="col-md-4">
@@ -161,7 +166,7 @@ Documents Uploaded
 
 
 
-<p>Loan Details</p>
+<h2>Loan Details</h2>
 <hr>
 <form>
 
@@ -196,6 +201,10 @@ Documents Uploaded
     </div>
 
 </form>
+
+<button (click)="submit(thisForm.value.applicationStatus)" class="form-submit-button2">Submit</button>
+
+
 
 
 

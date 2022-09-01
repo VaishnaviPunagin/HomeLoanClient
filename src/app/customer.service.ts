@@ -56,6 +56,16 @@ export class CustomerService {
     return this.http.get<any>(this.url+"/submittedForVerification");
   } 
 
+  getAllApprovedLoans()
+  {
+    return this.http.get<any>(this.url+"/approved");
+  }
+
+  getAllRejectedLoans()
+  {
+    return this.http.get<any>(this.url+"/rejected");
+  } 
+
   handleError(error:HttpErrorResponse){
       let errorMessage="";
       errorMessage=error.status +'\n'+error.statusText+'\n'+error.error;

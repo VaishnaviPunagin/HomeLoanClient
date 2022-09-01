@@ -42,4 +42,13 @@ export class ProfileVerificationComponent implements OnInit {
       this.currentLoan=data);
   }
 
+  OnSubmit(val:any){
+    
+  }
+
+  submit(val:any){
+    console.log(val);
+    //Update the Application Status of the user using Customer Service functionality here
+  }
+
 }
